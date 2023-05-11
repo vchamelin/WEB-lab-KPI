@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Content from './Content';
 
-function Body({ content }) {
+function Body() {
   const [state, setState] = useState(0);
 
   const handleStateChange = (index) => {
@@ -15,7 +15,7 @@ function Body({ content }) {
         <button type="button" className="btn btn-primary" onClick={() => handleStateChange(1)}>State 2</button>
         <button type="button" className="btn btn-primary" onClick={() => handleStateChange(2)}>State 3</button>
       </div>
-      <Content content={content} state={state} />
+      <Content state={state} />
     </div>
   );
 }

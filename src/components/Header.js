@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Header({ onContentChange }) {
-  const elements = ['Element 1', 'Element 2', 'Element 3', 'Element 4', 'Element 5', 'Element 6', 'Element 7', 'Element 8'];
+  const elements = ['Lab 1', 'Lab 2', 'Lab 3', 'Lab 4', 'Lab 5'];
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">

@@ -1,18 +1,19 @@
 import React from 'react';
+import Page1 from '../pages-lab1/Page1';
+import Page2 from '../pages-lab1/Page2';
+import Page3 from '../pages-lab1/Page3';
 
-function Content({ content, state }) {
-  const contents = [
-    ['Content 1 - State 1', 'Content 1 - State 2', 'Content 1 - State 3'],
-    ['Content 2 - State 1', 'Content 2 - State 2', 'Content 2 - State 3'],
-    ['Content 3 - State 1', 'Content 3 - State 2', 'Content 3 - State 3'],
-    ['Content 4 - State 1', 'Content 4 - State 2', 'Content 4 - State 3'],
-    ['Content 5 - State 1', 'Content 5 - State 2', 'Content 5 - State 3'],
-    ['Content 6 - State 1', 'Content 6 - State 2', 'Content 6 - State 3'],
-    ['Content 7 - State 1', 'Content 7 - State 2', 'Content 7 - State 3'],
-    ['Content 8 - State 1', 'Content 8 - State 2', 'Content 8 - State 3'],
-  ];
-
-  return <div className="mt-4">{contents[content][state]}</div>;
+function Content({ state }) {
+  switch (state) {
+    case 0:
+      return <Page1 />;
+    case 1:
+      return <Page2 />;
+    case 2:
+      return <Page3 />;
+    default:
+      return <div>Invalid state</div>;
+  }
 }
 
 export default Content;
