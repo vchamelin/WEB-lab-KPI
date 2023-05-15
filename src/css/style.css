@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.App {
+    max-width: 100%;
+    width: calc(100% - 120px);
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header__content {
+    margin-bottom: 20px;
+}
+
+.header__title {
+    text-align: center;
+}
+
+.header__team {
+    text-align: center;
+}
+
+.header__img_item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav {
+    width: 100%;
+    height: auto;
+}
+
+.nav__content {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.nav__button {
+    padding: 10px 20px;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    border: none;
+}
+
+.body__wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.body__aside,
+.body__content {
+    width: 100%;
+    height: auto;
+}
+
+.body__task {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.body__button {
+    background-color: lightskyblue;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.body__content {
+    padding-top: 40px;
+}

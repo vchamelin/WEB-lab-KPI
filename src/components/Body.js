@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/style.css';
 
 // Lab 1
 import Page1 from '../lab1/Page1';
@@ -16,20 +17,44 @@ function Body({ lab }) {
       name: 'Lab 1', 
       pages: [<Page1 />, <Page2 />, <Page3 />, <Page4 />, <Page5 />, <Page6 />], 
       buttonNames: ['Тема, Мета, Місце розташування звітного HTML-документу', 'Опис предметного середовища', 'Зовнішній вигляд головної сторінки', 'HTML-код головної сторінки', 'ВИСНОВКИ'] 
-    },  { 
+    }, 
+    { 
       name: 'Lab 2', 
       pages: [<Page1 />, <Page2 />, <Page3 />], 
-      buttonNames: ['Button 1', 'Button 2', 'Button 3']  
-    },  { 
+      buttonNames: ['Тема, Мета, Місце розташування звітного HTML-документу', 'Способи підключення стилів', 'Селектори', 'CSS: шрифти, текст, фон, контур', 'ВИСНОВКИ']  
+    }, 
+    { 
       name: 'Lab 3', 
       pages: [<Page1 />, <Page2 />, <Page3 />], 
-      buttonNames: ['Button 1', 'Button 2', 'Button 3']  
-    },  { 
+      buttonNames: ['Тема, Мета, Місце розташування звітного HTML-документу', 'ЗАВДАННЯ №1 (зовнішній вигляд макету, код макету)', 'ЗАВДАННЯ №2', 'ЗАВДАННЯ №3 FLEXBOX', 'ВИСНОВКИ']  
+    }, 
+    { 
       name: 'Lab 4', 
       pages: [<Page1 />, <Page2 />, <Page3 />], 
-      buttonNames: ['Button 1', 'Button 2', 'Button 3']  
-    },  { 
+      buttonNames: ['Тема, Мета, Місце розташування звітного HTML-документу', 'Способи функціонального застосування JavaScript', 'Масиви (пункт4)', 'Виконання пункту 6', 'ВИСНОВКИ']  
+    },
+    { 
       name: 'Lab 5', 
+      pages: [<Page1 />, <Page2 />, <Page3 />], 
+      buttonNames: ['Тема, Мета, Місце розташування звітного HTML-документу', 'Динамічні елементи третього пункту', 'Галерея UniteGallery', 'Кнопки соціальних мереж', 'Інформери', 'ВИСНОВКИ']  
+    },
+    { 
+      name: 'Lab 6', 
+      pages: [<Page1 />, <Page2 />, <Page3 />], 
+      buttonNames: ['Button 1', 'Button 2', 'Button 3']  
+    },
+    { 
+      name: 'Lab 7', 
+      pages: [<Page1 />, <Page2 />, <Page3 />], 
+      buttonNames: ['Button 1', 'Button 2', 'Button 3']  
+    },
+    { 
+      name: 'Lab 8', 
+      pages: [<Page1 />, <Page2 />, <Page3 />], 
+      buttonNames: ['Button 1', 'Button 2', 'Button 3']  
+    },
+    { 
+      name: 'Lab 9', 
       pages: [<Page1 />, <Page2 />, <Page3 />], 
       buttonNames: ['Button 1', 'Button 2', 'Button 3']  
     },
@@ -45,16 +70,20 @@ function Body({ lab }) {
   }
 
   return (
-    <div className="container mt-4">
-      <h2>{labs[lab].name}</h2>
-      <div className="btn-group" role="group">
-        {labs[lab].buttonNames.map((buttonName, index) => (
-          <button key={index} type="button" className="btn btn-primary" onClick={() => handlePageChange(index)}>
-            {buttonName}
-          </button>
-        ))}
+    <div className="body__wrapper">
+      <div className='body__aside'>
+        <h2>{labs[lab].name}</h2>
+        <div className="body__task" role="group">
+          {labs[lab].buttonNames.map((buttonName, index) => (
+            <button key={index} type="button" className="body__button" onClick={() => handlePageChange(index)}>
+              {buttonName}
+            </button>
+          ))}
+        </div>
       </div>
-      {contentPage(labs[lab].pages[page])}
+      <div className='body__content'>
+        {contentPage(labs[lab].pages[page])}
+      </div>
     </div>
   );
 }
