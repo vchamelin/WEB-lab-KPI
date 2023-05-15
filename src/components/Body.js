@@ -7,7 +7,6 @@ import Page2 from '../lab1/Page2';
 import Page3 from '../lab1/Page3';
 import Page4 from '../lab1/Page4';
 import Page5 from '../lab1/Page5';
-import Page6 from '../lab1/Page6';
 
 function Body({ lab }) {
   const [page, setPage] = useState(0);
@@ -15,7 +14,7 @@ function Body({ lab }) {
   const labs = [
     { 
       name: 'Lab 1', 
-      pages: [<Page1 />, <Page2 />, <Page3 />, <Page4 />, <Page5 />, <Page6 />], 
+      pages: [<Page1 />, <Page2 />, <Page3 />, <Page4 />, <Page5 />], 
       buttonNames: ['Тема, Мета, Місце розташування звітного HTML-документу', 'Опис предметного середовища', 'Зовнішній вигляд головної сторінки', 'HTML-код головної сторінки', 'ВИСНОВКИ'] 
     }, 
     { 

@@ -10,7 +10,7 @@ function Header({ onLabChange }) {
     <header className='header'>
       <div className='header__content'>
         <h1 className='header__title'>ЗВІТ З ЛАБОРАТОРНИХ РОБІТ З ДИСЦИПЛІНИ "WEB-ОРІЄНТОВНІ ТЕХНОЛОГІЇ ОСНОВИ FRINTEND та BACKEND РОЗРОБОК"</h1>
-        <h2 className='header__team'>Виконовці: <img className='header__img_item' src={slava}/> Амелін В. О. <img className='header__img_item' src={krutoy}/> Крутіков А. В. <img className='header__img_item' src={chub}/> Чуб М. Б.</h2>
+        <h2 className='header__team'>Виконовці: <img className='header__img_item' src={slava}/> Амелін В. О., гр. ІП-05 <img className='header__img_item' src={krutoy}/> Крутіков А. В., гр. ІП-05 <img className='header__img_item' src={chub}/> Чуб М. Б., гр. ІП-05</h2>
       </div>
       <nav className="nav">
         <ul className="nav__content">

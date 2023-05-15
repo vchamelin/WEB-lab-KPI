@@ -82,5 +82,7 @@
 }
 
 .body__content {
+    width: 100%;
     padding-top: 40px;
+    overflow-x: scroll;
 }
