@@ -1,10 +1,9 @@
-import React from 'react';
-import lab1 from '../img/lab1.png'
+import React, { useEffect } from 'react';
 
 function Page3() {
-  return <div>
-    <img src={lab1}/>
-  </div>;
+  return(
+    <div>Page 3</div>
+  )
 }
 
 export default Page3;
