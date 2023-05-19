@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 function Page4() {
   const code = `
   <html lang="X-UA-Compatible"><head>
