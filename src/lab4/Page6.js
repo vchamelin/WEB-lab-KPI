@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Page3() {
+function Page6() {
   return (
     <div>Kryt</div>
   );
 }
 
-export default Page3;
+export default Page6;

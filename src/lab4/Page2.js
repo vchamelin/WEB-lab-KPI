@@ -1,27 +1,110 @@
-import React from 'react';
+import React, { useState } from "react";
 
 function Page2() {
-  return ( 
+  const [size, setSize] = useState(0);
+  const [result, setResult] = useState({});
+
+  const handleInputChange = (e) => {
+    setSize(Number(e.target.value));
+  };
+
+  const handleButtonClick = () => {
+    let randomArray = Array.from({length: size}, () => Math.floor(Math.random() * size));
+    let evenIndexArr = randomArray.filter((_, i) => i % 2 === 0);
+    let evenArr = randomArray.filter(n => n % 2 === 0);
+    
+    const insertionSort = (arr) => {
+      for (let i = 1; i < arr.length; i++) {
+        const current = arr[i];
+        let j = i - 1;
+        while (j >= 0 && arr[j] > current) {
+          arr[j + 1] = arr[j];
+          j--;
+        }
+        arr[j + 1] = current;
+      }
+      return arr;
+    };
+
+    const swapElements = (arr, i1, i2) => {
+      [arr[i1], arr[i2]] = [arr[i2], arr[i1]];
+      return arr;
+    };
+
+    const maxEvenIndex = Math.max(...evenIndexArr);
+    const maxEven = Math.max(...evenArr);
+
+    let swapped = swapElements([...randomArray], randomArray.indexOf(maxEvenIndex), randomArray.indexOf(maxEven));
+
+    setResult({
+      originalArray: randomArray,
+      evenIndicesArray: evenIndexArr,
+      maxEvenIndicesValue: maxEvenIndex,
+      maxEvenIndicesIndex: randomArray.indexOf(maxEvenIndex),
+      evenElementsArray: evenArr,
+      maxEvenElementsValue: maxEven,
+      maxEvenElementsIndex: randomArray.indexOf(maxEven),
+      swappedArray: swapped,
+      sortedArray: insertionSort(swapped)
+    });
+  };
+
+  const codeTxt = `
+  const handleInputChange = (e) => {
+    setSize(Number(e.target.value));
+  };
+
+  const handleButtonClick = () => {
+    let randomArray = Array.from({length: size}, () => Math.floor(Math.random() * size));
+    let evenIndexArr = randomArray.filter((_, i) => i % 2 === 0);
+    let evenArr = randomArray.filter(n => n % 2 === 0);
+    
+    const insertionSort = (arr) => {
+      for (let i = 1; i < arr.length; i++) {
+        const current = arr[i];
+        let j = i - 1;
+        while (j >= 0 && arr[j] > current) {
+          arr[j + 1] = arr[j];
+          j--;
+        }
+        arr[j + 1] = current;
+      }
+      return arr;
+    };
+
+    const swapElements = (arr, i1, i2) => {
+      [arr[i1], arr[i2]] = [arr[i2], arr[i1]];
+      return arr;
+    };
+
+    const maxEvenIndex = Math.max(...evenIndexArr);
+    const maxEven = Math.max(...evenArr);
+
+    let swapped = swapElements([...randomArray], randomArray.indexOf(maxEvenIndex), randomArray.indexOf(maxEven));
+`;
+
+  return (
     <div>
-      <p>Предметна область онлайн-сервісу доставки їжі включає в себе різноманітність аспектів, таких як:
+      <label>
+        Enter array size:
+        <input type="number" value={size} onChange={handleInputChange} />
+      </label>
+      <button onClick={handleButtonClick}>Calculate</button>
+      <div className="result">
+        <p>Original Array: {result.originalArray?.join(", ")}</p>
+        <p>Even Indices Array: {result.evenIndicesArray?.join(", ")}</p>
+        <p>Max Even Indices Value: {result.maxEvenIndicesValue}</p>
+        <p>Max Even Indices Index: {result.maxEvenIndicesIndex}</p>
+        <p>Even Elements Array: {result.evenElementsArray?.join(", ")}</p>
+        <p>Max Even Elements Value: {result.maxEvenElementsValue}</p>
+        <p>Max Even Elements Index: {result.maxEvenElementsIndex}</p>
+        <p>Swapped Array: {result.swappedArray?.join(", ")}</p>
+        <p>Sorted Array: {result.sortedArray?.join(", ")}</p>
+      </div>
 
-Меню ресторанів: Сервіс повинен надавати детальний та структурований каталог меню різних ресторанів, включаючи страви, напої, десерти тощо. Кожна страва має мати відповідну інформацію, включаючи ціну, фото, опис, інгредієнти, вагу/об'єм, час приготування та інші важливі деталі.
-
-Корзина замовлень: Користувачі мають мати можливість додавати страви до своєї корзини замовлень, переглядати її, вносити зміни у кількість страв або видаляти їх з корзини.
-
-Інформація про доставку та оплату: Сервіс має надавати повну інформацію про доступні методи доставки та оплати, включаючи вартість доставки, час доставки, географічні обмеження, режим роботи та ін.
-
-Реєстрація та особистий кабінет: Користувачі повинні мати можливість реєстрації та створення особистого кабінету, де вони можуть відслідковувати статус своїх замовлень, переглядати історію замовлень, зберігати адресу доставки та контактні дані, налаштовувати персональні налаштування та вибрані ресторани та страви.
-
-Відгуки та рейтинги: Сервіс повинен мати функціональність для залишення відгуків та рейтингів на ресторани і їх страви. Відгуки допомагають іншим користувачам приймати рішення про вибір ресторану та страв, а також надають зворотний зв'язок для ресторанів, що дозволяє їм вдосконалювати свої продукти та сервіси.
-
-Клієнтський сервіс: Онлайн-сервіс доставки їжі повинен мати ефективний клієнтський сервіс, що включає в себе відповідні канали зворотного зв'язку, такі як електронна пошта, телефонні дзвінки, чати тощо. Клієнтський сервіс має бути готовим допомогти у вирішенні будь-яких проблем або запитань, які можуть виникнути у процесі використання сервісу.
-
-Промоції та знижки: Для приваблення та утримання клієнтів, сервіс може пропонувати різноманітні промоції, знижки або програми лояльності. Це може включати в себе знижки на перше замовлення, бонуси за рекомендації, сезонні пропозиції тощо.
-
-Трекінг замовлення: Сервіс доставки їжі має надавати можливість відслідковувати статус замовлення в реальному часі, від моменту розміщення замовлення до моменту його доставки.
-
-Загалом, предметне середовище онлайн-сервісу доставки їжі охоплює широкий спектр аспектів, включаючи меню ресторанів, корзину замовлень, інформацію про доставку та оплату, реєстрацію та особистий кабінет, відгуки та рейтинги, клієнтський сервіс, промоції та знижки, а також трекінг замовлень.</p>
+      <pre>
+        {codeTxt}
+      </pre>
     </div>
   );
 }
