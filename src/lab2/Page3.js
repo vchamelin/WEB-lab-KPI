@@ -1,10 +1,33 @@
 import React from 'react';
-import lab1 from '../img/lab1.png'
 
 function Page3() {
-  return <div>
-    <img src={lab1}/>
-  </div>;
+  const styleBtn = {
+    padding: '10px 20px',
+    backgroundColor: 'lightskyblue',
+    borderRadius: '10px',
+    border: 'none',
+  }
+
+  const btn = (<button type="button" style={styleBtn}>Увійти!</button>);
+
+  const context = `
+    Програмний HTML-код:
+    '<button type="button" style={styleBtn}>Увійти!</button>'
+
+    CCS-код:
+    {padding: '10px 20px', backgroundColor: 'lightskyblue', borderRadius: '10px', border: 'none'}
+  `;
+
+  return (
+    <div>
+      <pre>
+        {context}
+      </pre>
+
+      Резултат виконання:
+      {btn}
+    </div>
+  );
 }
 
 export default Page3;

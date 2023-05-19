@@ -20,7 +20,7 @@ function Body({ lab }) {
 
   const labs = [
     { name: 'Lab 1', buttonNames: ['Тема, Мета, Місце розташування звітного HTML-документу', 'Опис предметного середовища', 'Зовнішній вигляд головної сторінки', 'HTML-код головної сторінки', 'ВИСНОВКИ'] },
-    { name: 'Lab 2', buttonNames: ['Button 1', 'Button 2', 'Button 3', 'Button 4', 'Button 5'] },
+    { name: 'Lab 2', buttonNames: ['Тема й мета. Місце розташування сайту', 'Способи підключення стилів', 'Селектори елементів', 'Селектори класів', 'Селектори ідентифікаторів', 'Інші селектори', 'CSS: Шрифти, Текст, Таблиці, Фон, Контур, Списки', 'Висновки'] },
     { name: 'Lab 3', buttonNames: ['Button 1', 'Button 2', 'Button 3', 'Button 4', 'Button 5'] },
     { name: 'Lab 4', buttonNames: ['Button 1', 'Button 2', 'Button 3', 'Button 4', 'Button 5'] },
     { name: 'Lab 5', buttonNames: ['Button 1', 'Button 2', 'Button 3', 'Button 4', 'Button 5'] },
