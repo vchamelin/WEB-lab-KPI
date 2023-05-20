@@ -90,3 +90,127 @@
 .tests {
     border: 1px solid black
 }
+
+.course {
+    background-color: #292929;
+}
+
+.course>h3 {
+    color: white;
+    padding-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.course>h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #ff973b;
+    text-align: center;
+}
+
+
+.good {
+    background-color: #212121;
+    width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+    margin-bottom: 10px;
+}
+
+.good>img {
+    display: block;
+    margin: 0 auto;
+}
+
+.good>h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+
+.good>h5 {
+    font-weight: 700;
+    color: #ff973b;
+    text-align: center;
+}
+
+.good>p {
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.good>span {
+    font-weight: 700;
+    display: block;
+    margin: 0 auto;
+    color: #2c73b1;
+    text-align: center;
+}
+
+.good>a {
+    height: 50px;
+    line-height: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper_item {
+    display: flex;
+    justify-content: space-around;
+    background-color: blue;
+    padding: 20px 0 20px 0;
+}
+
+.wrapper_item img {
+    border-radius: 15px;
+}
+
+.wrapper_pro {
+    background-color: #fff;
+}
+
+.wrapper_pro img {
+    float: left;
+}
+
+.wrapper_pro h3 {
+    color: orange;
+    font-size: 40px;
+}
+
+.pro_txt {
+    padding-top: 20px;
+}
+
+footer {
+    margin-top: 169px;
+    height: 70px;
+    background-color: orange;
+}
+
+.footer_desc {
+    color: white;
+    font-size: 30px;
+    vertical-align: middle;
+    float: left;
+}
+
+footer span {
+    color: black;
+    font-size: 20px;
+}
