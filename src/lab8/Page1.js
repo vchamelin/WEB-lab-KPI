@@ -4,7 +4,7 @@ function Page1() {
 
   return ( 
     <div> 
-      <h2>Test 1</h2>
+      <h2>Test 3</h2>
       <h5>
         Питання 1: This function lets you delete multiple files at once.<br />
         Відпоідь: deleteMany() <br />

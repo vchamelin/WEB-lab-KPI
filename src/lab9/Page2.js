@@ -6,7 +6,7 @@ import result from '../img/krutikov_result.jpg'
 function Page2() {
   return ( 
     <div>
-      <h2>Test 1</h2>
+      <h2>Test 4</h2>
       <img className='tests' src={week_four_1} />
       <br></br>
       <br></br>

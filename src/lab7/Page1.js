@@ -3,7 +3,7 @@ import React from 'react';
 function Page1() {
   return ( 
     <div> 
-      <h2>Test 1</h2>
+      <h2>Test 2</h2>
       <h5>
         Питання 1: API stands for:<br />
         Відпоідь: Application Programming Interface <br />
