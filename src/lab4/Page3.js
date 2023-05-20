@@ -13,7 +13,7 @@ function Page3() {
     const size = parseInt(arraySize);
     const newArray = [];
     for (let i = 0; i < size; i++) {
-      const randomValue = Math.floor(Math.random() * 16);
+      const randomValue = Math.floor(Math.random() * 30);
       newArray.push(randomValue);
     }
     setInputArray(newArray);
