@@ -1,0 +1,88 @@
+.chub_wrapper {
+    padding: 0 100px;
+}
+
+.chub_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    gap: 150px;
+    margin-bottom: 50px;
+}
+
+.chub_main__img img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.chub_main__price {
+    display: flex;
+    gap: 10px;
+}
+
+.chub_main__oldprice {
+    color: blue;
+}
+
+.chub_main__newprice {
+    font-size: 120%;
+    color: red;
+    font-weight: bold;
+}
+
+.chub_main__save {
+    color: green;
+}
+
+.chub_main__time {
+    color: orange;
+}
+
+.chub_main__buy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    padding: 5px 0;
+    font-size: 120%;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.chub_main__thing {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    gap: 10px;
+    font-size: 90%;
+}
+
+.chub_main__thing img {
+    width: 100%;
+    object-fit: fill;
+    text-align: center;
+}
+
+.chub_more__table, 
+.chub_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.chub_footer {
+    color: grey;
+    font-size: 90%;
+    background-color: white;
+}
+
+.chub_footer__title {
+    color: black;
+    font-size: 100%;
+}
+
+.chub_more__item img{
+    width: 100%;
+}
